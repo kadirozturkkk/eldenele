@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elden Ele — İkinci El</title>
+<title>Elden Ellere — İkinci El</title>
 <meta name="description" content="Kullanmadığım eşyaları uygun fiyata satıyorum. Beğendiğin bir şey olursa WhatsApp'tan yaz.">
-<meta property="og:title" content="Elden Ele — İkinci El">
+<meta property="og:title" content="Elden Ellere — İkinci El">
 <meta property="og:description" content="Kullanmadığım eşyaları uygun fiyata satıyorum.">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -157,7 +157,7 @@ footer{color:var(--mute);font-size:13px;padding:22px 0 34px;border-top:1px solid
 </head>
 <body>
 <div id="banner"></div>
-<header><div class="wrap hbar"><a class="logo" href="#vitrin" id="logo">Elden <span>Ele</span></a><nav class="hnav"><a href="#vitrin" data-n="h">Vitrin</a><a href="#hakkimda" data-n="ab">Hakkımda</a></nav><span id="hbtn"></span></div></header>
+<header><div class="wrap hbar"><a class="logo" href="#vitrin" id="logo">Elden <span>Ellere</span></a><nav class="hnav"><a href="#vitrin" data-n="h">Vitrin</a><a href="#hakkimda" data-n="ab">Hakkımda</a></nav><span id="hbtn"></span></div></header>
 <main id="app"></main>
 <footer><div class="wrap" id="foot"></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
@@ -175,14 +175,14 @@ const STAT={active:"Satışta",reserved:"Rezerve",sold:"Satıldı"};
 const PH=["#E9D5C6","#D5E2D6","#DDD8EA","#EEE1BF","#D3E1EA","#E4DED2"];
 const ABOUT=`Merhaba, burası benim küçük ikinci el köşem.
 
-Evde zamanla bir şeyler birikiyor: bir zamanlar çok sevdiğim ama artık kullanmadığım eşyalar, "bir gün lazım olur" diye dolapta beklettiklerim… Onları bir köşede tozlandırmak yerine gerçekten işine yarayacak birine ulaştırmak istedim. Elden Ele böyle doğdu.
+Evde zamanla bir şeyler birikiyor: bir zamanlar çok sevdiğim ama artık kullanmadığım eşyalar, "bir gün lazım olur" diye dolapta beklettiklerim… Onları bir köşede tozlandırmak yerine gerçekten işine yarayacak birine ulaştırmak istedim. Elden Ellere böyle doğdu.
 
 Burada gördüğün her şey benim kendi eşyam. Mağaza değilim, aracı da yok. Her ürünün nasıl kullanıldığını bizzat biliyorum. Kusuru varsa açıklamada yazarım, merak ettiğin bir şey olursa dürüstçe cevaplarım. Gerekirse ekstra fotoğraf da çekerim.
 
 Beğendiğin bir ürün olursa sayfasındaki WhatsApp butonuna dokunman yeterli, mesajın hazır gelir. Pazarlık payı varsa ürünün üzerinde yazar. Teslimatı elden ya da kargoyla yapabiliriz.
 
 Eşyalar ikinci el olabilir ama güven her zaman birinci el olmalı.`;
-const DEF={name:"Elden Ele",tagline:"Kullanmadığım eşyaları uygun fiyata satıyorum. Beğendiğin bir şey olursa WhatsApp'tan yaz.",wa:"",city:"",about:ABOUT};
+const DEF={name:"Elden Ellere",tagline:"Kullanmadığım eşyaları uygun fiyata satıyorum. Beğendiğin bir şey olursa WhatsApp'tan yaz.",wa:"",city:"",about:ABOUT};
 function mark(bg,fg,dot){return `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="${bg}"/>
 <path d="M18 35a14 14 0 0 1 24.5-11.8" fill="none" stroke="${fg}" stroke-width="5.5" stroke-linecap="round"/>
 <path d="M46 29a14 14 0 0 1-24.5 11.8" fill="none" stroke="${fg}" stroke-width="5.5" stroke-linecap="round"/>
@@ -250,7 +250,7 @@ function render(){S._form=false;S._home=false;chrome();const r=route();
  if(r.v==="d")return detail(r.id);if(r.v==="a")return admin(r.t);if(r.v==="ab")return about();home()}
 
 
-function about(){app.innerHTML=`<div class="wrap"><section class="ab"><div class="abmark">${mark("transparent","#F3EFE6","#E9A23B")}<small>ELDEN · ELE</small></div>
+function about(){app.innerHTML=`<div class="wrap"><section class="ab"><div class="abmark">${mark("transparent","#F3EFE6","#E9A23B")}<small>ELDEN · ELLERE</small></div>
  <div><h1>Eşyaların <em>ikinci</em><br>hikâyesi burada başlar.</h1><div class="abtxt">${esc(S.set.about||ABOUT)}</div>
  <div class="row" style="margin-top:22px"><a class="btn acc" href="#vitrin">Vitrine göz at →</a>${waLink()?`<a class="btn wa" style="width:auto;font-size:15px;padding:10px 16px" href="${waLink()}" target="_blank" rel="noopener">💬 Bana yaz</a>`:""}</div></div></section>
  <div class="prom"><div>🔍<b>Dürüst açıklama</b><span>Kusur varsa saklamam, fotoğrafta ve yazıda görürsün.</span></div>
